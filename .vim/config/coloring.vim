@@ -19,3 +19,5 @@ hi CursorLineNr cterm=bold ctermfg=196 ctermbg=none
 hi LineNr ctermfg=gray ctermbg=none
 
 hi Visual ctermbg=240
+
+hi MatchParen ctermbg=32 ctermfg=white

@@ -10,7 +10,6 @@ set virtualedit=onemore	" 行末まで移動可能
 
 set showmatch
 set matchtime=1
-hi MatchParen ctermbg=32 ctermfg=white
 
 set pumheight=10	" 補完メニューの高さ
 
