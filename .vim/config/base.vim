@@ -26,7 +26,8 @@ set smartindent
 
 filetype plugin indent on
 autocmd BufWritePost ~/.vimrc source ~/.vimrc
-autocmd FileType c, cpp setlocal cindent
+autocmd FileType c setlocal cindent
+autocmd FileType cpp setlocal cindent
 
 set wildmenu
 
