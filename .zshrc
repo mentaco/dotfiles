@@ -13,3 +13,5 @@ export MYSQLCLIENT_LDFLAGS="${LDFLAGS} -L${BREW_PREFIX}/opt/zlib/lib"
 export MYSQLCLIENT_CFLAGS="${CPPFLAGS} -I${BREW_PREFIX}/opt/zlib/include"
 
 export PATH="$HOME/development/flutter/bin:$PATH"
+
+export PATH="$HOME/.nodebrew/current/bin:$PATH"
