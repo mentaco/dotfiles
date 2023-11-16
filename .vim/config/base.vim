@@ -36,7 +36,7 @@ set mouse=a
 set hidden		"バッファ切り替えの時にファイルを保存しなくてもよい"
 
 "括弧・クォーテーションの補完"
-inoremap { {}<LEFT>
+" inoremap { {}<LEFT>
 " inoremap [ []<LEFT>
 " inoremap ( ()<LEFT>
 " inoremap " <LEFT>
