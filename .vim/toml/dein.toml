@@ -21,3 +21,13 @@ repo = 'Yggdroot/indentLine'
 repo = 'neoclide/coc.nvim'
 rev = 'release'
 merged = '0'
+
+[[plugins]]
+repo = 'dracula/vim'
+merged = '0'
+name = 'dracula'
+
+[[plugins]]
+repo = 'joshdick/onedark.vim'
+merged = '0'
+name = 'onedark'
