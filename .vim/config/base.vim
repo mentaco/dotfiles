@@ -28,6 +28,7 @@ filetype plugin indent on
 autocmd BufWritePost ~/.vimrc source ~/.vimrc
 autocmd FileType c setlocal cindent
 autocmd FileType cpp setlocal cindent
+autocmd FileType dart setlocal tabstop=2 shiftwidth=2 softtabstop=2
 
 set wildmenu
 
