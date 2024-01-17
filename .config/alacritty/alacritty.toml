@@ -1,0 +1,24 @@
+[colors.primary]
+background = "#272a3a"
+foreground = "#cdcdb6"
+
+[font]
+size = 14.0
+
+[font.normal]
+family = "RobotoMono Nerd Font"
+
+[window]
+opacity = 0.96
+
+[window.dimensions]
+columns = 170
+lines = 52
+
+[window.padding]
+x = 6
+y = 2
+
+[window.position]
+x = 290
+y = 200
