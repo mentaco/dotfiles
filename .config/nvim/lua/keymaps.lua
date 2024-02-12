@@ -17,3 +17,10 @@ vim.keymap.set('n', '<S-L>', '<Cmd>vertica resize +2<CR>', { noremap = true })
 -- cursor
 vim.keymap.set('n', '<C-H>', '<S-H>', { noremap = true })
 vim.keymap.set('n', '<C-L>', '<S-L>', { noremap = true })
+
+-- concatenation of rows
+vim.keymap.set('n', '<S-U>', '<S-J>', { noremap = true })
+
+-- telescope file browser
+vim.api.nvim_set_keymap( "n", "<C-N>", ":Telescope file_browser<CR>", { noremap = true })
+
