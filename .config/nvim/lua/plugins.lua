@@ -4,6 +4,18 @@ return {
         config = true,
     },
     {
+        "bluz71/vim-nightfly-colors",
+        name = "nightfly",
+        lazy = false,
+        priority = 1000,
+    },
+    {
+        "folke/tokyonight.nvim",
+        lazy = false,
+        priority = 1000,
+        config = true,
+    },
+    {
         "nvim-telescope/telescope-file-browser.nvim",
         dependencies = { "nvim-telescope/telescope.nvim", "nvim-lua/plenary.nvim" },
     },
