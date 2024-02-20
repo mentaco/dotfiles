@@ -16,6 +16,11 @@ return {
         config = true,
     },
     {
+        "nvim-lualine/lualine.nvim",
+        dependencies = { "nvim-tree/nvim-web-devicons" },
+        config = true,
+    },
+    {
         "nvim-tree/nvim-tree.lua",
         lazy = false,
         dependencies = { "nvim-tree/nvim-web-devicons" },
@@ -157,7 +162,7 @@ return {
             local cmp = require("cmp")
 
             cmp.setup({
-                snipet = {
+                snippet = {
                     expand = function(args)
                         require("luasnip").lsp_expand(args.body)
                     end,
