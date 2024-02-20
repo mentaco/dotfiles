@@ -22,5 +22,7 @@ vim.keymap.set('n', '<C-L>', '<S-L>', { noremap = true })
 vim.keymap.set('n', '<S-U>', '<S-J>', { noremap = true })
 
 -- telescope file browser
-vim.api.nvim_set_keymap( "n", "<C-N>", ":Telescope file_browser<CR>", { noremap = true })
+vim.api.nvim_set_keymap( "n", "<leader>ts", ":Telescope file_browser<CR>", { noremap = true })
 
+-- NvimTree
+vim.api.nvim_set_keymap( "n", "<C-N>", ":NvimTreeToggle<CR>", { noremap = true })

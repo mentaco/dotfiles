@@ -16,6 +16,12 @@ return {
         config = true,
     },
     {
+        "nvim-tree/nvim-tree.lua",
+        lazy = false,
+        dependencies = { "nvim-tree/nvim-web-devicons" },
+        config = true,
+    },
+    {
         "nvim-telescope/telescope-file-browser.nvim",
         dependencies = { "nvim-telescope/telescope.nvim", "nvim-lua/plenary.nvim" },
     },
