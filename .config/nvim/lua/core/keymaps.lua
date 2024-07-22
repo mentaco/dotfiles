@@ -9,17 +9,10 @@ vim.keymap.set('n', 'sp', '<Cmd>tabprevious<CR>')
 vim.keymap.set('n', 'sc', '<Cmd>tabclose<CR>')
 
 -- window control
-vim.keymap.set('n', '<S-J>', '<Cmd>resize -2<CR>')
-vim.keymap.set('n', '<S-K>', '<Cmd>resize +2<CR>')
-vim.keymap.set('n', '<S-H>', '<Cmd>vertical resize -2<CR>')
-vim.keymap.set('n', '<S-L>', '<Cmd>vertica resize +2<CR>')
-
--- cursor
-vim.keymap.set('n', '<C-H>', '<S-H>')
-vim.keymap.set('n', '<C-L>', '<S-L>')
-
--- concatenation of rows
-vim.keymap.set('n', '<S-U>', '<S-J>')
+vim.keymap.set('n', '_', '<Cmd>horizontal resize -2<CR>')
+vim.keymap.set('n', '+', '<Cmd>horizontal resize +2<CR>')
+vim.keymap.set('n', '-', '<Cmd>vertical resize -2<CR>')
+vim.keymap.set('n', '=', '<Cmd>vertical resize +2<CR>')
 
 -- telescope file browser
 vim.keymap.set( 'n', '<leader>ts', ':Telescope file_browser<CR>')
