@@ -33,3 +33,13 @@ vim.cmd('autocmd FileType dart setlocal tabstop=2 shiftwidth=2 softtabstop=2')
 vim.opt.termguicolors = true
 vim.opt.winblend = 0
 vim.opt.pumblend = 0
+
+
+-- Hide line numbers when flutter log window is opened
+vim.api.nvim_create_autocmd("BufWinEnter", {
+    pattern = "__FLUTTER_DEV_LOG__*",
+    callback = function()
+        vim.wo.number = false
+        vim.wo.relativenumber = false
+    end
+})
