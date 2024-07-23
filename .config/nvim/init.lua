@@ -1,4 +1,4 @@
 -- load lazy.nvim
-require('lazy_nvim')
+require('config.lazy_nvim')
 
 require('core')
