@@ -20,7 +20,7 @@ export PATH="$HOME/.nodebrew/current/bin:$PATH"
 if [[ ! -n $TMUX && $- == *l* ]]; then
     ID="`tmux list-sessions`"
     if [[ -z "${ID}" ]]; then
-        tmux new-session
+        tmux new-session && exit
     fi
     create_new_session="Create New Session"
     ID="${ID}\n${create_new_session}:"
@@ -28,7 +28,7 @@ if [[ ! -n $TMUX && $- == *l* ]]; then
     if [[ "${ID}" = "${create_new_session}" ]]; then
         tmux new-session
     elif [[ -n "${ID}" ]]; then
-        tmux attach-session -t "${ID}"
+        tmux attach-session -t "${ID}" && exit
     else
         :    # Start terminal normally
     fi
