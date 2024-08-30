@@ -86,5 +86,9 @@ return {
             capabilities = capabilities,
             on_attach = on_attach,
         })
+
+        lspconfig["omnisharp"].setup({
+            cmd = { "dotnet", vim.fn.expand("~/.local/share/nvim/mason/packages/omnisharp/libexec/OmniSharp.dll") },
+        })
     end,
 }
