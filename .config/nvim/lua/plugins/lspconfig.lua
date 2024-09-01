@@ -87,8 +87,10 @@ return {
             on_attach = on_attach,
         })
 
-        lspconfig["omnisharp"].setup({
-            cmd = { "dotnet", vim.fn.expand("~/.local/share/nvim/mason/packages/omnisharp/libexec/OmniSharp.dll") },
-        })
+        if vim.loop.os_uname().sysname == "Darwin" then
+            lspconfig["omnisharp"].setup({
+                cmd = { "dotnet", vim.fn.expand("~/.local/share/nvim/mason/packages/omnisharp/libexec/OmniSharp.dll") },
+            })
+        end
     end,
 }
