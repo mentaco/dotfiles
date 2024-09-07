@@ -8,6 +8,9 @@ return {
     config = function()
         local lspconfig = require("lspconfig")
         local cmp_nvim_lsp = require("cmp_nvim_lsp")
+        local util = require("lspconfig.util")
+
+        local unpack = table.unpack or unpack
 
         local keymap = vim.keymap
         local opts = { noremap = true, silent = true }
@@ -85,6 +88,18 @@ return {
         lspconfig.pyright.setup({
             capabilities = capabilities,
             on_attach = on_attach,
+            root_dir = function(fname)
+                local root_files = {
+                    'pyproject.toml',
+                    'setup.py',
+                    'setup.cfg',
+                    'requirements.txt',
+                    'Pipfile',
+                    'pyrightconfig.json',
+                    '.git',
+                }
+                return util.root_pattern(unpack(root_files))(fname)
+            end
         })
 
         if vim.loop.os_uname().sysname == "Darwin" then
