@@ -57,12 +57,12 @@ return {
 
         local capabilities = cmp_nvim_lsp.default_capabilities()
 
-        lspconfig["clangd"].setup({
+        lspconfig.clangd.setup({
             capabilities = capabilities,
             on_attach = on_attach,
         })
 
-        lspconfig["lua_ls"].setup({
+        lspconfig.lua_ls.setup({
             capabilities = capabilities,
             on_attach = on_attach,
             settings = { -- custom settings for lua
@@ -82,13 +82,13 @@ return {
             },
         })
 
-        lspconfig["pyright"].setup({
+        lspconfig.pyright.setup({
             capabilities = capabilities,
             on_attach = on_attach,
         })
 
         if vim.loop.os_uname().sysname == "Darwin" then
-            lspconfig["omnisharp"].setup({
+            lspconfig.omnisharp.setup({
                 cmd = { "dotnet", vim.fn.expand("~/.local/share/nvim/mason/packages/omnisharp/libexec/OmniSharp.dll") },
             })
         end
