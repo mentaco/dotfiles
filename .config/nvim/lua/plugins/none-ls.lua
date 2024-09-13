@@ -22,6 +22,13 @@ return {
 			sources = {
 				require("none-ls-shellcheck.diagnostics"),
 				require("none-ls-shellcheck.code_actions"),
+
+				-- C/C++ format setting
+				null_ls.builtins.formatting.clang_format.with({
+					extra_args = {
+						"--style={BasedOnStyle: LLVM, IndentWidth: 2, IndentCaseLabels: true}",
+					},
+				}),
 			},
 			on_attach = function(client, bufnr)
 				-- formatting on save
