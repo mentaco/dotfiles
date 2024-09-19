@@ -10,7 +10,7 @@ size = 14.0
 normal = { family = "RobotoMono Nerd Font", style = "Regular" }
 
 [window]
-opacity = 0.96
+opacity = 0.98
 
 [window.dimensions]
 columns = 170
