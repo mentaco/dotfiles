@@ -11,15 +11,12 @@ normal = { family = "RobotoMono Nerd Font", style = "Regular" }
 
 [window]
 opacity = 0.98
+decorations = "Buttonless"
 
 [window.dimensions]
-columns = 170
-lines = 52
+columns = 150
+lines = 45
 
 [window.padding]
 x = 6
 y = 6
-
-[window.position]
-x = 290
-y = 200
