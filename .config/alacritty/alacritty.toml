@@ -11,7 +11,6 @@ normal = { family = "RobotoMono Nerd Font", style = "Regular" }
 
 [window]
 opacity = 0.98
-decorations = "Buttonless"
 
 [window.dimensions]
 columns = 150
