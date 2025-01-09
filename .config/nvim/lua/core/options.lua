@@ -1,4 +1,5 @@
 vim.opt.encoding = "utf-8"
+vim.opt.fileencodings = "utf-8"
 vim.opt.backup = false
 vim.opt.number = true
 vim.opt.virtualedit = "onemore"
