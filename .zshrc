@@ -1,5 +1,3 @@
-export PATH="$HOME/.local/share/nvim/mason/bin:$PATH"
-
 cat << "EOF"
  ______   ______   __  __    
 /\___  \ /\  ___\ /\ \_\ \   
@@ -7,6 +5,12 @@ cat << "EOF"
   /\_____\\/\_____\\ \_\ \_\ 
   \/_____/ \/_____/ \/_/\/_/
 EOF
+
+PATH="$HOME/.local/share/nvim/mason/bin:$PATH"
+
+HISTSIZE=1000
+SAVEHIST=1000
+HISTFILE="$HOME/.zsh_history"
 
 # PROMPT="%F{159}%~%f %# "
 
