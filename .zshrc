@@ -26,9 +26,10 @@ zstyle ':completion:*:default' menu select=1
 zstyle :prompt:pure:path color 159
 zstyle :prompt:pure:execution_time color 247
 zstyle :prompt:pure:git:stash show yes
-PURE_PROMPT_SYMBOL='%F{215}%#%f'
+PURE_PROMPT_SYMBOL='%F{#df8e1d}%#%f'
 
-ZSH_HIGHLIGHT_STYLES[cursor]='fg=#ffffff'
+# for dracula theme
+# ZSH_HIGHLIGHT_STYLES[cursor]='fg=#ffffff'
 
 # Start tmux
 if [[ -z $TMUX && $- == *l* ]]; then

@@ -20,8 +20,12 @@ github = "zsh-users/zsh-autosuggestions"
 [plugins.zsh-syntax-highlighting]
 github = "zsh-users/zsh-syntax-highlighting"
 
-[plugins.dracura-theme]
-github = "dracula/zsh-syntax-highlighting"
+# [plugins.dracura-theme]
+# github = "dracula/zsh-syntax-highlighting"
+
+[plugins.catppuccin]
+github = "catppuccin/zsh-syntax-highlighting"
+use = ["themes/catppuccin_macchiato-zsh-syntax-highlighting.zsh"]
 
 [plugins.pure]
 github = "sindresorhus/pure"
