@@ -23,10 +23,12 @@ autoload -Uz compinit && compinit
 zstyle ':completion:*:default' list-colors di=34 ex=31 ln=35
 zstyle ':completion:*:default' menu select=1
 
+PURE_PROMPT_SYMBOL='%#'
 zstyle :prompt:pure:path color 159
 zstyle :prompt:pure:execution_time color 247
 zstyle :prompt:pure:git:stash show yes
-PURE_PROMPT_SYMBOL='%F{#df8e1d}%#%f'
+zstyle :prompt:pure:prompt:success color 221
+zstyle :prompt:pure:prompt:error color 009
 
 # for dracula theme
 # ZSH_HIGHLIGHT_STYLES[cursor]='fg=#ffffff'
