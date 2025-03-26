@@ -35,6 +35,10 @@ vim.opt.termguicolors = true
 vim.opt.winblend = 0
 vim.opt.pumblend = 0
 
+-- folding
+vim.opt.foldmethod = "indent"
+vim.opt.foldlevel = 99
+
 -- Hide line numbers when flutter log window is opened
 vim.api.nvim_create_autocmd("BufWinEnter", {
 	pattern = "__FLUTTER_DEV_LOG__*",
