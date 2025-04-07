@@ -6,7 +6,9 @@ cat << "EOF"
   \/_____/ \/_____/ \/_/\/_/
 EOF
 
-PATH="$HOME/.local/share/nvim/mason/bin:$PATH"
+typeset -U PATH
+export PATH="$HOME/.local/share/nvim/mason/bin:$PATH"
+export CPATH="/opt/homebrew/Cellar/boost/1.87.0_1/include:$CPATH"
 
 HISTSIZE=1000
 SAVEHIST=1000
