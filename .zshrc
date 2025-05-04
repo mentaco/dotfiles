@@ -8,6 +8,7 @@ EOF
 
 typeset -U PATH
 export PATH="$HOME/.local/share/nvim/mason/bin:$PATH"
+export PATH="$HOME/develop/flutter/bin:$PATH"
 export CPATH="/opt/homebrew/Cellar/boost/1.87.0_1/include:$CPATH"
 
 HISTSIZE=1000
