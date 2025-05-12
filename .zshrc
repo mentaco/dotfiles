@@ -19,6 +19,8 @@ HISTFILE="$HOME/.zsh_history"
 
 alias ls="ls --color"
 
+disable r
+
 # Load zsh plugins
 eval "$(sheldon source)"
 
