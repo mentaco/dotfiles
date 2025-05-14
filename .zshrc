@@ -9,7 +9,6 @@ EOF
 typeset -U PATH
 export PATH="$HOME/.local/share/nvim/mason/bin:$PATH"
 export PATH="$HOME/develop/flutter/bin:$PATH"
-export CPATH="/opt/homebrew/Cellar/boost/1.87.0_1/include:$CPATH"
 
 HISTSIZE=1000
 SAVEHIST=1000
@@ -38,20 +37,7 @@ zstyle :prompt:pure:prompt:error color 009
 # for dracula theme
 # ZSH_HIGHLIGHT_STYLES[cursor]='fg=#ffffff'
 
-# Start tmux
-if [[ -z $TMUX && $- == *l* ]]; then
-    ID="$(tmux list-sessions)"
-    if [[ -z "${ID}" ]]; then
-        tmux new-session && exit
-    fi
-    create_new_session="Create New Session"
-    ID="${ID}\n${create_new_session}:"
-    ID="$(echo -e "${ID}" | fzf | cut -d: -f1)"
-    if [[ "${ID}" = "${create_new_session}" ]]; then
-        tmux new-session
-    elif [[ -n "${ID}" ]]; then
-        tmux attach-session -t "${ID}" && exit
-    else
-        :    # Start terminal normally
-    fi
-fi
+case "$(uname)" in
+    "Darwin") source $HOME/.mac_zshrc ;;
+    "Linux" ) source $HOME/.linux_zshrc ;;
+esac
