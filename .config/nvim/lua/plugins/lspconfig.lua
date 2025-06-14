@@ -50,7 +50,7 @@ return {
 			capabilities = capabilities,
 			on_attach = on_attach,
 			root_dir = function(fname)
-				local root_files = {
+				local root_pattern = util.root_pattern(
 					"pyproject.toml",
 					"setup.py",
 					"setup.cfg",
@@ -58,9 +58,9 @@ return {
 					"Pipfile",
 					"pyrightconfig.json",
 					".git",
-					".env",
-				}
-				return util.root_pattern(unpack(root_files))(fname) or vim.fn.getcwd()
+					".env"
+				)
+				return root_pattern(fname) or vim.fn.getcwd()
 			end,
 		})
 
