@@ -6,32 +6,29 @@ return {
         "hrsh7th/cmp-nvim-lsp",
     },
     config = function()
-        local lspconfig = require("lspconfig")
         local cmp_nvim_lsp = require("cmp_nvim_lsp")
-        local util = require("lspconfig.util")
-
-        local unpack = table.unpack
-
         local on_attach = require("lsp.on_attach").on_attach
-
         local capabilities = cmp_nvim_lsp.default_capabilities()
 
-        lspconfig.bashls.setup({
+        vim.lsp.config("bashls", {
             capabilities = capabilities,
             on_attach = on_attach,
         })
+        vim.lsp.enable("bashls")
 
-        lspconfig.clangd.setup({
+        vim.lsp.config("clangd", {
             capabilities = capabilities,
             on_attach = on_attach,
         })
+        vim.lsp.enable("clangd")
 
-        lspconfig.cmake.setup({
+        vim.lsp.config("cmake", {
             capabilities = capabilities,
             on_attach = on_attach,
         })
+        vim.lsp.enable("cmake")
 
-        lspconfig.lua_ls.setup({
+        vim.lsp.config("lua_ls", {
             capabilities = capabilities,
             on_attach = on_attach,
             settings = { -- custom settings for lua
@@ -50,29 +47,19 @@ return {
                 },
             },
         })
+        vim.lsp.enable("lua_ls")
 
-        lspconfig.pyright.setup({
+        vim.lsp.config("pyright", {
             capabilities = capabilities,
             on_attach = on_attach,
-            root_dir = function(fname)
-                local root_pattern = util.root_pattern(
-                    "pyproject.toml",
-                    "setup.py",
-                    "setup.cfg",
-                    "requirements.txt",
-                    "Pipfile",
-                    "pyrightconfig.json",
-                    ".git",
-                    ".env"
-                )
-                return root_pattern(fname) or vim.fn.getcwd()
-            end,
         })
+        vim.lsp.enable("pyright")
 
-        if vim.loop.os_uname().sysname == "Darwin" then
-            lspconfig.omnisharp.setup({
+        if vim.uv.os_uname().sysname == "Darwin" then
+            vim.lsp.config("omnisharp", {
                 cmd = { "dotnet", vim.fn.expand("~/.local/share/nvim/mason/packages/omnisharp/libexec/OmniSharp.dll") },
             })
+            vim.lsp.enable("omnisharp")
         end
     end,
 }
