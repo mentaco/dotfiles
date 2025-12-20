@@ -10,12 +10,13 @@ size = 14.0
 normal = { family = "RobotoMono Nerd Font", style = "Regular" }
 
 [window]
-opacity = 0.98
+opacity = 0.94
+blur = true
 
 [window.dimensions]
 columns = 150
 lines = 45
 
 [window.padding]
-x = 6
-y = 6
+x = 8
+y = 8
