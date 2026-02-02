@@ -8,12 +8,12 @@ return {
                     enabled = false,
                 },
                 scratchPad = {
-                    enabled = true,
-                    location = "~/notes",
+                    enabled = false,
+                    -- location = "~/notes",
                 },
-                bo = {
-                    filetype = "txt",
-                },
+                -- bo = {
+                --     filetype = "txt",
+                -- },
             },
             autocmds = {
                 enableOnVimEnter = true,
