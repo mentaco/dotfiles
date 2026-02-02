@@ -1,7 +1,9 @@
 # Font
 font-family = "RobotoMono Nerd Font"
-font-family = "Osaka"
+font-family = "BIZ UDGothic"
 font-size = 14.5
+font-thicken = true
+font-thicken-strength = 60
 
 # Window
 background-opacity = 0.94
