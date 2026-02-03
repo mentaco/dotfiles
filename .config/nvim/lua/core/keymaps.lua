@@ -16,6 +16,3 @@ vim.keymap.set('n', '=', ':vertical resize +2<CR>')
 
 -- telescope file browser
 vim.keymap.set( 'n', '<leader>ts', ':Telescope file_browser<CR>')
-
--- NvimTree
-vim.keymap.set('n', '<C-N>', ':NvimTreeToggle<CR>')
