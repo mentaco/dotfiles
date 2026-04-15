@@ -54,12 +54,5 @@ return {
             on_attach = on_attach,
         })
         vim.lsp.enable("pyright")
-
-        if vim.uv.os_uname().sysname == "Darwin" then
-            vim.lsp.config("omnisharp", {
-                cmd = { "dotnet", vim.fn.expand("~/.local/share/nvim/mason/packages/omnisharp/libexec/OmniSharp.dll") },
-            })
-            vim.lsp.enable("omnisharp")
-        end
     end,
 }
