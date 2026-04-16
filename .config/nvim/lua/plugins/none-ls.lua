@@ -45,9 +45,4 @@ return {
 			end,
 		})
 	end,
-
-	-- Format code
-	vim.keymap.set("n", "<leader>p", function()
-		vim.lsp.buf.format({ async = false })
-	end),
 }

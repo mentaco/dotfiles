@@ -19,7 +19,5 @@ return {
 			automatic_installation = true,
 		})
 
-        -- Keymap for jq
-        vim.keymap.set('n', '<F5>', ':%!jq .<CR>')
 	end,
 }

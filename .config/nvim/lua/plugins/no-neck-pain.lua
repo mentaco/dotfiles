@@ -21,6 +21,5 @@ return {
                 -- reloadOnColorSchemeChange = true,
             },
         })
-        vim.keymap.set("n", "<leader>z", "<cmd>NoNeckPain<CR>")
     end,
 }

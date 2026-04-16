@@ -16,3 +16,14 @@ vim.keymap.set('n', '=', ':vertical resize +2<CR>')
 
 -- telescope file browser
 vim.keymap.set( 'n', '<leader>ts', ':Telescope file_browser<CR>')
+
+-- format code
+vim.keymap.set("n", "<leader>p", function()
+	vim.lsp.buf.format({ async = false })
+end)
+
+-- jq format
+vim.keymap.set('n', '<F5>', ':%!jq .<CR>')
+
+-- no-neck-pain toggle
+vim.keymap.set("n", "<leader>z", "<cmd>NoNeckPain<CR>")
