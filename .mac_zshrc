@@ -1,4 +1,4 @@
-export CPATH="/opt/homebrew/Cellar/boost/1.87.0_1/include:$CPATH"
+export CPATH="$(brew --prefix boost)/include:$CPATH"
 export PATH="$PATH":"$HOME/.pub-cache/bin"
 export PATH="$PATH":"$HOME/.local/bin"
 
