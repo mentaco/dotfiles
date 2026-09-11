@@ -27,3 +27,6 @@ vim.keymap.set('n', '<F5>', ':%!jq .<CR>')
 
 -- no-neck-pain toggle
 vim.keymap.set("n", "<leader>z", "<cmd>NoNeckPain<CR>")
+
+-- vimtex compile (single-shot)
+vim.keymap.set( 'n', '\\ls', ':VimtexCompileSS<CR>')
