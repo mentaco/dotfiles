@@ -57,8 +57,8 @@ rex.bind("tmux/n", "client.tab.next")
 rex.bind("tmux/p", "client.tab.previous")
 
 -- タブの並び替え
-rex.bind("tmux/shift+n", "client.tab.move.backward")
-rex.bind("tmux/shift+p", "client.tab.move.forward")
+rex.bind("tmux/shift+p", "client.tab.move.backward")
+rex.bind("tmux/shift+n", "client.tab.move.forward")
 
 -- ========================================
 -- Resize Mode（連続リサイズ用）
