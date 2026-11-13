@@ -1,0 +1,122 @@
+@import "mocha.css";
+
+* {
+    font-family: "Gen Shin Gothic", "Font Awesome 7 Free Solid";
+    font-size: 16px;
+    min-height: 0;
+}
+
+/* Liquid Glass */
+@define-color glass rgba(49, 50, 68, 0.6);
+
+#waybar {
+    background: transparent;
+    color: @text;
+    margin: 5px 5px;
+}
+
+#workspaces {
+    border-radius: 1rem;
+    margin: 5px;
+    background-color: @glass;
+    margin-left: 1rem;
+}
+
+#workspaces button {
+    color: @lavender;
+    border-radius: 1rem;
+    padding: 0.4rem;
+}
+
+#workspaces button.active {
+    color: @teal;
+    border-radius: 1rem;
+}
+
+#workspaces button:hover {
+    color: @sapphire;
+    border-radius: 1rem;
+}
+
+#idle_inhibitor,
+#cpu,
+#memory,
+#custom-music,
+#tray,
+#clock.date,
+#clock.time,
+#pulseaudio,
+#custom-mic,
+#custom-lock,
+#custom-power {
+    background-color: @glass;
+    padding: 0.5rem 1rem;
+    margin: 5px 0;
+}
+
+#pulseaudio {
+    color: @maroon;
+    margin-left: 0;
+    border-radius: 0;
+}
+
+#pulseaudio.sink {
+    margin-left: 1rem;
+    border-radius: 1rem 0 0 1rem;
+}
+
+#custom-mic {
+    color: @maroon;
+    margin-left: 0;
+}
+
+#custom-music {
+    color: @mauve;
+    border-radius: 1rem;
+}
+
+#idle_inhibitor.activated {
+    border-radius: 1rem 0 0 1rem;
+    color: @rosewater;
+}
+
+#idle_inhibitor.deactivated {
+    border-radius: 1rem 0 0 1rem;
+    color: @overlay2;
+}
+
+#custom-lock {
+    color: @lavender;
+}
+
+#custom-power {
+    margin-right: 1rem;
+    border-radius: 0 1rem 1rem 0;
+    color: @red;
+}
+
+#tray {
+    margin-right: 1rem;
+    border-radius: 1rem;
+}
+
+#cpu {
+    color: @blue;
+}
+
+#memory {
+    color: @blue;
+    border-radius: 0 1rem 1rem 0;
+    margin-right: 1rem;
+}
+
+#clock.date {
+    color: @yellow;
+    border-radius: 1rem 0 0 1rem;
+    margin-left: 5px;
+}
+
+#clock.time {
+    color: @yellow;
+    border-radius: 0 1rem 1rem 0;
+}

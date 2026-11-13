@@ -1,0 +1,95 @@
+{
+    "layer": "top",
+    "position": "bottom", // Waybar position (top|bottom|left|right)
+    // "width": 1280, // Waybar width
+    // Choose the order of the modules
+    "modules-left": ["clock#date", "clock#time", "hyprland/workspaces"],
+    "modules-center": ["custom/music"],
+    "modules-right": ["pulseaudio#sink", "custom/mic", "cpu", "memory", "tray", "idle_inhibitor", "custom/lock", "custom/power"],
+
+    "hyprland/workspaces": {
+         "disable-scroll": true,
+         "sort-by-name": true,
+         "format": " {icon} ",
+         "format-icons": {
+             "default": " "
+         },
+         "persistent-workspaces": {
+             "*": 5
+         }
+     },
+    "tray": {
+        "icon-size": 21,
+        "spacing": 10
+    },
+    "custom/music": {
+        "format": "{}",
+        "escape": true,
+        "interval": 1,
+        "tooltip": false,
+        "exec": "~/.config/waybar/scripts/music.sh",
+        "on-click": "playerctl play-pause",
+        "max-length": 70
+    },
+    "clock#date": {
+        "timezone": "Asia/Tokyo",
+        "format": " {0:%m/%d (%a)}",
+        "tooltip": true,
+        "tooltip-format": "<big>{:%Y %B}</big>\n<tt><small>{calendar}</small></tt>"
+    },
+    "clock#time": {
+        "timezone": "Asia/Tokyo",
+        "format": " {0:%H:%M}",
+        "interval": 1,
+        "tooltip": false
+    },
+    "pulseaudio#sink": {
+        "scroll-step": 5,
+        "format": "{icon} {volume}%",
+        "format-muted": "  {volume}%",
+        "format-icons": {
+            "default": [" ", " ", " "]
+        },
+        "on-click": "wpctl set-mute @DEFAULT_AUDIO_SINK@ toggle",
+        "on-click-right": "pavucontrol"
+    },
+    "custom/mic": {
+        "exec": "~/.config/waybar/scripts/pulseaudio_source.sh",
+        "interval": 1,
+
+        "on-click": "wpctl set-mute @DEFAULT_AUDIO_SOURCE@ toggle",
+        "on-scroll-up": "wpctl set-volume -l 1.5 @DEFAULT_AUDIO_SOURCE@ 5%+",
+        "on-scroll-down": "wpctl set-volume @DEFAULT_AUDIO_SOURCE@ 5%-",
+        "on-click-right": "pavucontrol"
+    },
+    "custom/lock": {
+        "tooltip": false,
+        "on-click": "sh -c '(sleep 0.5s; hyprlock)' & disown",
+        "format": ""
+    },
+    "custom/power": {
+        "tooltip": false,
+        "on-click": "wlogout &",
+        "format": ""
+    },
+    "cpu": {
+        "format": "  {usage}%",
+        "interval": 2,
+        "tooltip": true,
+        "tooltip-format": "平均周波数: {avg_frequency:.2f} GHz\n最大周波数: {max_frequency:.2f} GHz\nLoad Average: {load1:.2f}"
+    },
+    "memory": {
+        "format": "  {percentage}%",
+        "interval": 2,
+        "tooltip": true,
+        "tooltip-format": "{used:0.1f} / {total:0.1f} GiB"
+    },
+    "idle_inhibitor": {
+        "format": "{icon}",
+        "format-icons": {
+            "activated": "",
+            "deactivated": ""
+        },
+        "tooltip": true
+    }
+}
